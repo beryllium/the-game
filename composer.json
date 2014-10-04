@@ -1,0 +1,19 @@
+{
+    "name": "berylium/the-game",
+    "description": "A simple javascript game",
+    "homepage": "http://github.com/beryllium/the-game",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Boyd",
+            "email": "kevin.boyd@gmail.com"
+        }
+    ],
+    "require": {
+        "robloach/component-installer": "*",
+        "components/jquery": "*"
+    },
+    "config": {
+        "component-dir": "web/components"
+    }
+}
