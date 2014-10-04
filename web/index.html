@@ -1,0 +1,66 @@
+<html>
+<head>
+    <script type="text/javascript" src="components/jquery/jquery-built.js"></script>
+    <script type="text/javascript" src="assets/mousetrap.js"></script>
+
+    <style>
+        body {
+            text-align: center;
+        }
+        .the_game {
+            font-size: 15em;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#next-btn').click(function() {
+                var first_letter = 'A'.charCodeAt();
+                var last_letter  = 'Z'.charCodeAt();
+                var current_letter = $('.the_game').text().charCodeAt();
+
+                if (current_letter === last_letter) {
+                    return false;
+                }
+
+                $('.the_game').text(String.fromCharCode(current_letter + 1));
+            });
+
+            $('#back-btn').click(function() {
+                var first_letter = 'A'.charCodeAt();
+                var last_letter  = 'Z'.charCodeAt();
+                var current_letter = $('.the_game').text().charCodeAt();
+
+                if (current_letter === first_letter) {
+                    return false;
+                }
+
+                $('.the_game').text(String.fromCharCode(current_letter - 1));
+            });
+
+            Mousetrap.bind('left', function() {
+               $('#back-btn').click();
+            });
+
+            Mousetrap.bind('right', function() {
+                $('#next-btn').click();
+            });
+
+            Mousetrap.bind('up', function() {
+                var fontSize = parseInt($('.the_game').css("font-size"));
+                fontSize = fontSize + 4 + "px";
+                $('.the_game').css({'font-size':fontSize});
+            })
+
+            Mousetrap.bind('down', function() {
+                var fontSize = parseInt($('.the_game').css("font-size"));
+                fontSize = fontSize - 4 + "px";
+                $('.the_game').css({'font-size':fontSize});
+            })
+        });
+    </script>
+</head>
+<body>
+<div class="the_game">A</div>
+<div><button id="back-btn">&laquo; Back</button> <button id="next-btn">Next &raquo;</button></div>
+</body>
+</html>
