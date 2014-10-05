@@ -1,15 +1,23 @@
 <html>
 <head>
     <script type="text/javascript" src="components/jquery/jquery-built.js"></script>
+    <script type="text/javascript" src="components/bootstrap/bootstrap-built.js"></script>
     <script type="text/javascript" src="assets/mousetrap.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="components/bootstrap/css/bootstrap.min.css">
     <style>
         body {
             text-align: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f2f2f2;
         }
+
         .the_game {
             font-size: 15em;
+            font-family: serif;
         }
+
     </style>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -64,7 +72,12 @@
     </script>
 </head>
 <body>
-<div class="the_game">A</div>
-<div><button id="back-btn">&laquo; Back</button> <button id="next-btn">Next &raquo;</button></div>
+<div class="container">
+    <div class="the_game">A</div>
+    <div>
+        <button id="back-btn" class="btn btn-large btn-radius btn-primary">&laquo; Back</button>
+        <button id="next-btn" class="btn btn-large btn-radius btn-primary">Next &raquo;</button>
+    </div>
+</div>
 </body>
 </html>

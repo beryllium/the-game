@@ -11,7 +11,8 @@
     ],
     "require": {
         "robloach/component-installer": "*",
-        "components/jquery": "*"
+        "components/jquery": "*",
+        "components/bootstrap": "*"
     },
     "config": {
         "component-dir": "web/components"
